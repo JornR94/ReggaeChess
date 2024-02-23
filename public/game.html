@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reggae Chess</title>
+        <link rel="stylesheet" href="stylesheets/game.css">
+
+        <!-- <script language = javascript>
+            function updateName() {
+                var query = url.parse(req.url, true).query;
+                var playerName = "unknown";
+                if (query["playername"]!=undefined)
+                    playerName = query["playername"];
+                console.log("Playername: %s", playerName);
+                $("#your-name").html(playerName); // div with your name
+                $.getJSON("/play", function(name) {
+                    namePlayer.empty();
+                })
+            }
+        </script> -->
+    </head>
+
+    <body>
+        <main>
+            <section id="main-area">
+
+
+                <div id="main-area-top">
+                        <div id="opponent-name">
+                            <h4>Opponent name</h4>
+                        </div>
+                        <div id="pieces-lost"></div>
+                </div>
+                <div id="playfield">
+                    <div id="timer-area">
+                        <div id="timer-area-top">
+                        </div>
+    
+                        <div id="timer">
+                            <p>Make your move in</p> <!-- On turn opponent: Opponent has -->
+                            <h3 id="timerSecs">60</h3>
+                            <p>Seconds</p>
+                        </div>
+    
+                        <div id="timer-area-bottom">
+                        </div>
+                    </div>
+
+                    <div id="main-area-middle">
+                        
+                        <div class="grid-container" id="checkerboard">
+                            <div class="grid-row">
+                                <div class="grid-square" id="aa" onclick="onClickGrid('1','1')"></div>
+                                <div class="grid-square" onclick="onClickGrid('2','1')"></div>
+                                <div class="grid-square" onclick="onClickGrid('3','1')"></div>
+                                <div class="grid-square" onclick="onClickGrid('4','1')"></div>
+                                <div class="grid-square" onclick="onClickGrid('5','1')"></div>
+                                <div class="grid-square" onclick="onClickGrid('6','1')"></div>
+                                <div class="grid-square" onclick="onClickGrid('7','1')"></div>
+                                <div class="grid-square" onclick="onClickGrid('8','1')"></div>
+                            </div>
+
+                            <div class="grid-row">
+                                <div class="grid-square" onclick="onClickGrid('1','2')"></div>
+                                <div class="grid-square" onclick="onClickGrid('2','2')"></div>
+                                <div class="grid-square" onclick="onClickGrid('3','2')"></div>
+                                <div class="grid-square" onclick="onClickGrid('4','2')"></div>
+                                <div class="grid-square" onclick="onClickGrid('5','2')"></div>
+                                <div class="grid-square" onclick="onClickGrid('6','2')"></div>
+                                <div class="grid-square" onclick="onClickGrid('7','2')"></div>
+                                <div class="grid-square" onclick="onClickGrid('8','2')"></div>
+                            </div>
+
+                            <div class="grid-row">
+                                <div class="grid-square" onclick="onClickGrid('1','3')"></div>
+                                <div class="grid-square" onclick="onClickGrid('2','3')"></div>
+                                <div class="grid-square" onclick="onClickGrid('3','3')"></div>
+                                <div class="grid-square" onclick="onClickGrid('4','3')"></div>
+                                <div class="grid-square" onclick="onClickGrid('5','3')"></div>
+                                <div class="grid-square" onclick="onClickGrid('6','3')"></div>
+                                <div class="grid-square" onclick="onClickGrid('7','3')"></div>
+                                <div class="grid-square" onclick="onClickGrid('8','3')"></div>
+                            </div>
+
+                            <div class="grid-row">
+                                <div class="grid-square" onclick="onClickGrid('1','4')"></div>
+                                <div class="grid-square" onclick="onClickGrid('2','4')"></div>
+                                <div class="grid-square" onclick="onClickGrid('3','4')"></div>
+                                <div class="grid-square" onclick="onClickGrid('4','4')"></div>
+                                <div class="grid-square" onclick="onClickGrid('5','4')"></div>
+                                <div class="grid-square" onclick="onClickGrid('6','4')"></div>
+                                <div class="grid-square" onclick="onClickGrid('7','4')"></div>
+                                <div class="grid-square" onclick="onClickGrid('8','4')"></div>
+                            </div>
+
+                            <div class="grid-row">
+                                <div class="grid-square" onclick="onClickGrid('1','5')"></div>
+                                <div class="grid-square" onclick="onClickGrid('2','5')"></div>
+                                <div class="grid-square" onclick="onClickGrid('3','5')"></div>
+                                <div class="grid-square" onclick="onClickGrid('4','5')"></div>
+                                <div class="grid-square" onclick="onClickGrid('5','5')"></div>
+                                <div class="grid-square" onclick="onClickGrid('6','5')"></div>
+                                <div class="grid-square" onclick="onClickGrid('7','5')"></div>
+                                <div class="grid-square" onclick="onClickGrid('8','5')"></div>
+                            </div>
+
+                            <div class="grid-row">
+                                <div class="grid-square" onclick="onClickGrid('1','6')"></div>
+                                <div class="grid-square" onclick="onClickGrid('2','6')"></div>
+                                <div class="grid-square" onclick="onClickGrid('3','6')"></div>
+                                <div class="grid-square" onclick="onClickGrid('4','6')"></div>
+                                <div class="grid-square" onclick="onClickGrid('5','6')"></div>
+                                <div class="grid-square" onclick="onClickGrid('6','6')"></div>
+                                <div class="grid-square" onclick="onClickGrid('7','6')"></div>
+                                <div class="grid-square" onclick="onClickGrid('8','6')"></div>
+                            </div>
+
+                            <div class="grid-row">
+                                <div class="grid-square" onclick="onClickGrid('1','7')"></div>
+                                <div class="grid-square" onclick="onClickGrid('2','7')"></div>
+                                <div class="grid-square" onclick="onClickGrid('3','7')"></div>
+                                <div class="grid-square" onclick="onClickGrid('4','7')"></div>
+                                <div class="grid-square" onclick="onClickGrid('5','7')"></div>
+                                <div class="grid-square" onclick="onClickGrid('6','7')"></div>
+                                <div class="grid-square" onclick="onClickGrid('7','7')"></div>
+                                <div class="grid-square" onclick="onClickGrid('8','7')"></div>
+                            </div>
+
+                            <div class="grid-row">
+                                <div class="grid-square" onclick="onClickGrid('1','8')"></div>
+                                <div class="grid-square" onclick="onClickGrid('2','8')"></div>
+                                <div class="grid-square" onclick="onClickGrid('3','8')"></div>
+                                <div class="grid-square" onclick="onClickGrid('4','8')"></div>
+                                <div class="grid-square" onclick="onClickGrid('5','8')"></div>
+                                <div class="grid-square" onclick="onClickGrid('6','8')"></div>
+                                <div class="grid-square" onclick="onClickGrid('7','8')"></div>
+                                <div class="grid-square" onclick="onClickGrid('8','8')"></div>
+                            </div>
+                        </div>
+                        <div id="chatbox">
+                                <div id="chat-top">
+                                    <h2>Chatbox</h2>
+                                </div>
+    
+                                <div id="chat-messages">
+                                    <h3>You: This is a message.</h3>
+                                    <h3>Other: This is also a message.</h3>
+                                </div>
+    
+                                <form id="chat-input" action="/chatInput" method="get">
+                                    <input type="text" name="message">
+                                </form>
+                            </div>
+                    </div>
+                </div>
+
+                <div id="main-area-bottom">
+                        <div id="your-name">
+                            <h4>Your name</h4>
+                        </div>
+                        <div id="pieces-won">
+                        </div>
+                    </div>
+            </section>
+        </main>
+
+        <section id="bottom">
+            <form id="bottom-right" action="/changeSettings" method="get">
+                <input id="exit-icon" type="image" src="./images/sound-icon.png"></input>
+                <input id="sound-icon" type="image" src="./images/exit-icon.png"></input>
+                <input id="fullscreen-icon" type="image" src="./images/fullscreen-icon.png"></input>
+            </form>
+        </section>
+
+        <script src="javascripts/communication.js"></script>   
+        <script src="javascripts/jquery-3.3.1.js"></script>
+        <script src="../game.js"></script>
+
+        
+        
+    </body>
+</html>

@@ -1,0 +1,158 @@
+@import 'style.css';
+
+/* Setting up buttons */
+
+.button {
+    text-align: center;
+    color: black;
+    font: 40px "Bauhaus 93";
+    background: var(--rastafari);
+    
+}
+
+.button:hover {
+    text-align: center;
+    color: white;
+    font: 40px "Bauhaus 93";
+    background: var(--rastafari);
+    opacity: 0.7;
+}
+
+/* Top part with logo */
+
+#top {
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+/* main form properties: */
+
+#main-form {
+    margin-top: 10px;
+}
+
+/* Reggae shark img on the left */
+
+#bottom-left {
+    float: left;
+    width: 10%;
+    /* margin-bottom: 0px; */
+}
+
+#reggae-shark {
+    margin-bottom: 0px;
+    /* height: 300%;
+    width: 300%; */
+}
+
+/* shake animation: */
+#reggae-shark:hover {
+    animation: shake 0.8s;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  20% { transform: translate(-3px, 0px) rotate(2deg); }
+  40% { transform: translate(1px, -1px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  100% { transform: translate(1px, 2px) rotate(-1deg); }
+}
+
+/* Middle part with play button and username input */
+
+#background-square {
+    position: relative;
+    text-align: center;
+    /* float: right; */
+    margin: auto;
+    width: 30%;
+    height: 300px;
+    background-color: black;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    border-radius: 10px;
+}
+
+#play-button {
+    margin: auto;
+    width: 50%;
+    height: 70px; 
+    margin-top: 70px;
+}
+
+#username {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+}
+
+#usernameInput {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Statistics part on the right */
+
+#bottom-right {
+    position: relative;
+    width: 25%;
+    left: 70%;
+    bottom: 300px;
+    /* margin-bottom: 0px;
+    margin-right: 0px; */
+}
+
+#statistics {
+    /* position: absolute;
+    margin-right: 0px;
+    margin-bottom: 0px; */
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+}
+
+#statistics-header {
+    text-align: center;
+    position: relative;
+    bottom: 300px;
+}
+
+#gameStatsLeft {
+    position: relative;
+    float: left;
+    left: 20px;
+    bottom: 300px;
+}
+
+#gameStatsRight {
+    position: relative;
+    left: 50px;
+    bottom: 285px;
+}
+
+#bottom-form {
+    position: relative;
+    width: 80%;
+    height: 70px;
+    left: 10%;
+    bottom: 0px;
+    /* text-align: center; */
+}
+
+
+

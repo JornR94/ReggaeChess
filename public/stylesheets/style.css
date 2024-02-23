@@ -1,0 +1,32 @@
+:root {
+  background: #333333;
+  --red: #F50601;
+  --green: #01B400;
+  --yellow: #FFCC01;
+  --rastafari: linear-gradient(to right,  var(--green) 0%,var(--green) 33%, 
+                                      var(--yellow) 33%, var(--yellow) 67%, var(--red) 67%, var(--red) 100%);
+}
+
+main, body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font: 14px "Bauhaus 93";
+}
+
+h1 {
+  position: relative;
+  color: white;
+  font: 40px "Bauhaus 93";
+  padding: 20px;
+}
+
+h2 {
+  position: relative;
+  color: white;
+  font: 18px "Bauhaus 93";
+}
+
+

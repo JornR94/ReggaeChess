@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reggae Schaak</title>
+        <link rel="stylesheet" href="stylesheets/splash.css">
+    </head>
+
+    <body>
+        <main>
+            <section id="top">
+                <img id="logo" src="./images/Logo.png">
+            </section>
+
+            <section id="main-form">
+                <div id="background-square">
+                    <form action="/play" method="get">
+                        <br> <br> <br> 
+                        username:<br> <br>
+                        <input id="usernameInput" type="text" name="playername"><br>
+                        <button class="button" id="play-button" type="submit">PLAY</button>
+                    </form>
+                </div>
+
+                <div id="bottom-left">
+                    <img id="reggae-shark" src="./images/Reggae-shark.png">
+                </div>
+    
+                <div id="bottom-right">
+                    <div id="statistics">
+                        <div>
+                            <h1 id="statistics-header">STATISTICS</h1>
+                        </div>
+                        
+                        <div id="gameStatsLeft">
+                            <h2>Now playing:</h2>
+                            <h2>Total games played:</h2>
+                            <h2>Average game length:</h2>
+                        </div>
+                        <div id="gameStatsRight">
+                            <h2 id="stats-now-playing">0</h2>
+                            <h2 id="stats-games-played">0</h2>
+                            <h2 id="stats-average-gameLength">00:00</h2>
+                        </div>
+                    </div>
+    
+                    <div id="bottom-form">
+                        <form action="/play" method="get">
+                            <button class="button" type="submit">HOW TO PLAY</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
